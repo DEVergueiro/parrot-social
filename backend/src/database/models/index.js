@@ -1,5 +1,10 @@
 const User = require('./user')
+const Post = require("./post")
 
-module.exports = {
-    User
-}
+
+Post.belongsTo(User,{
+    foreignKey:"User_id",
+})
+
+
+module.exports={User, Post}
