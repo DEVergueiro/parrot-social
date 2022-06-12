@@ -11,6 +11,13 @@ const Post = db.define(
       primaryKey: true,
       type: DataTypes.INTEGER
     },
+    user_id:{
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: { model: 'user', key: "user_id" },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
+      },
     content: {
       type: DataTypes.STRING,
       length: 300,
