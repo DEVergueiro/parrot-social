@@ -7,4 +7,4 @@ Post.belongsTo(User,{
 })
 
 
-module.exports={User, Post}
+module.exports = {User, Post}
